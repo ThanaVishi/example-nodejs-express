@@ -46,5 +46,5 @@ jobs:
             --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \ 
             --batch_size 3 --start_first \ 
             --auto_complete --timeout 600 \
-             /
+            /
       - run: echo Done

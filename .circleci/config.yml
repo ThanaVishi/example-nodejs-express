@@ -20,7 +20,7 @@ jobs:
       - setup_remote_docker
       - run: docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
       - run: 
-          name: "Build docker image and push t docker hub"
+          name: "Build docker image and push to docker hub"
           command: |
             if ["${CIRCLE_BRANCH}" == "master"]; then
               cp Dockerfile.production Dockerfile

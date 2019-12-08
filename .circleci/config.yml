@@ -36,15 +36,59 @@ jobs:
                 echo "This is ${CIRCLE_BRANCH}"
               fi
       - run:
-            name: "Call to rancher to deploy"
-            command: |
-              docker run --rm -it \
-                -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
-                -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
-                -e CATTLE_URL="$CATTLE_URL" \
-                etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
-                --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \
-                --batch_size 3 --start_first \
-                --auto_complete --timeout 600 \
-                /
+          name: "Call to rancher to deploy 1"
+          command: |
+            docker run --rm -it \
+              -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
+              -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
+              -e CATTLE_URL="$CATTLE_URL" \
+            etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
+              --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \
+              --batch_size 3 --start_first \
+              --auto_complete --timeout 600 \
+            /
+          name: "Call to rancher to deploy 2"
+          command: |
+            docker run --rm -it \
+              -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
+              -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
+              -e CATTLE_URL="$CATTLE_URL" \
+            etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
+              --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \
+              --batch_size 3 --start_first \
+              --auto_complete --timeout 600 \
+            /
+          name: "Call to rancher to deploy3"
+          command: |
+            docker run --rm -it \
+              -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
+              -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
+              -e CATTLE_URL="$CATTLE_URL" \
+            etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
+              --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \
+              --batch_size 3 --start_first \
+              --auto_complete --timeout 600 \
+            /
+          name: "Call to rancher to deploy4"
+          command: |
+            docker run --rm -it \
+              -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
+              -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
+              -e CATTLE_URL="$CATTLE_URL" \
+            etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
+              --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \
+              --batch_size 3 --start_first \
+              --auto_complete --timeout 600 \
+            /
+          name: "Call to rancher to deploy5"
+          command: |
+            docker run --rm -it \
+              -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
+              -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
+              -e CATTLE_URL="$CATTLE_URL" \
+            etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
+              --imageUuid 'docker:thanavi/example-nodejs-circle:latest' \
+              --batch_size 3 --start_first \
+              --auto_complete --timeout 600 \
+            /
       - run: echo Done
